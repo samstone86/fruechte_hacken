@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.MoveBoxesMoCap.UnityScript.Plugins", "UnityVS.MoveBoxesMoCap.UnityScript.Plugins.unityproj", "{5BC5D5A6-F701-77C7-0628-ADBD5CBBBC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.MoveBoxesMoCap.CSharp", "UnityVS.MoveBoxesMoCap.CSharp.csproj", "{E34CB7EF-28B0-3694-2025-00615B74BA86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.MoveBoxesMoCap.CSharp.Editor", "UnityVS.MoveBoxesMoCap.CSharp.Editor.csproj", "{33042CA4-90C1-E525-9898-D8C54D2B3EB5}"
+EndProject
+Project("{1FAC5C55-277D-4884-94A4-83DBDAF57E56}") = "UnityVS.MoveBoxesMoCap.UnityScript.Editor", "UnityVS.MoveBoxesMoCap.UnityScript.Editor.unityproj", "{AC313E5B-F3A4-CEE4-3C56-51C0059B8956}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.MoveBoxesMoCap.CSharp.Plugins", "UnityVS.MoveBoxesMoCap.CSharp.Plugins.csproj", "{FF8751AE-6DD3-ED03-1327-934ECEB309C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BC5D5A6-F701-77C7-0628-ADBD5CBBBC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC5D5A6-F701-77C7-0628-ADBD5CBBBC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC5D5A6-F701-77C7-0628-ADBD5CBBBC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC5D5A6-F701-77C7-0628-ADBD5CBBBC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E34CB7EF-28B0-3694-2025-00615B74BA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34CB7EF-28B0-3694-2025-00615B74BA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34CB7EF-28B0-3694-2025-00615B74BA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34CB7EF-28B0-3694-2025-00615B74BA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33042CA4-90C1-E525-9898-D8C54D2B3EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33042CA4-90C1-E525-9898-D8C54D2B3EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33042CA4-90C1-E525-9898-D8C54D2B3EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33042CA4-90C1-E525-9898-D8C54D2B3EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC313E5B-F3A4-CEE4-3C56-51C0059B8956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC313E5B-F3A4-CEE4-3C56-51C0059B8956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC313E5B-F3A4-CEE4-3C56-51C0059B8956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC313E5B-F3A4-CEE4-3C56-51C0059B8956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8751AE-6DD3-ED03-1327-934ECEB309C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8751AE-6DD3-ED03-1327-934ECEB309C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8751AE-6DD3-ED03-1327-934ECEB309C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8751AE-6DD3-ED03-1327-934ECEB309C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
