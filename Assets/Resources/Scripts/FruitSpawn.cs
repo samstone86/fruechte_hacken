@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class FruitSpawn : MonoBehaviour {
 
     public Transform[] spawnPoint;
+    List<GameObject> fruits = new List<GameObject>();
     public GameObject apple;
     public GameObject banana;
     public GameObject cherry;
@@ -16,8 +18,6 @@ public class FruitSpawn : MonoBehaviour {
     public float timeincrease = 0.04f;
     int randindex, randindex_old = 0, spawnlimit;
     GameManager manager;
-    bool itemspawned;
-    bool polespawned;
     bool[] spawnslotused;
     Vector3 spawnpos;
     
@@ -27,7 +27,13 @@ public class FruitSpawn : MonoBehaviour {
         waveTime = startWaveTime;
         startTime = Time.time;
         manager.runningGame = false;
-	}
+        fruits.Add(apple);
+        fruits.Add(banana);
+        fruits.Add(cherry);
+        fruits.Add(kiwi);
+        fruits.Add(orange);
+        fruits.Add(peach);
+    }
 	
 	// Update is called once per frame
     void FixedUpdate()
@@ -54,15 +60,17 @@ public class FruitSpawn : MonoBehaviour {
 
     void SpawnColliders()
     {
-        int[] spawnslotused = new int[3];
+        int[] spawnslotused = new int[5];
         spawnslotused[0] = 0; 
         spawnslotused[1] = 0; 
         spawnslotused[2] = 0;
+        spawnslotused[3] = 0;
+        spawnslotused[4] = 0;
         int blocksspawned = 0;
 
-        itemspawned = false;
-        polespawned = false;
-        spawnlimit = 2;
+        GameObject activeFruit;
+
+        spawnlimit = 3;
         for (int i = 0; i <= manager.turn / 10 && i < spawnlimit; i++) //i represents the number of obstacles or items to spawn in a single wave
         {
             randindex_old = randindex;
@@ -71,33 +79,11 @@ public class FruitSpawn : MonoBehaviour {
                 randindex = Random.Range(0, spawnPoint.Length);
             } while (spawnslotused[randindex] == 1);
             //while(randindex_old == randindex);
-        
-            if (manager.checkforitem() && !itemspawned) //Spawn an Item
-            {
-                Instantiate(cherry, spawnPoint[randindex].position, Quaternion.identity);
-                itemspawned = true;
-                spawnlimit++;
-                spawnslotused[randindex] = 1;
 
-            }
-            else
-            {
-                if ((Random.value <= manager.propability() || blocksspawned > 1 ) && !polespawned) //Spawn a High Pole
-                {
-                    spawnpos = spawnPoint[randindex].position;
-                    spawnpos.y = 1.4f;
-                    spawnpos.x--;
-                    Instantiate(banana, spawnpos, Quaternion.AngleAxis(90, new Vector3(0, 1, 0)));
-                    polespawned = true;
-                    spawnslotused[randindex] = 1;
-                }
-                else //Spawn a Block
-                {
-                    Instantiate(GetComponent<Collider>(), spawnPoint[randindex].position, Quaternion.AngleAxis(90,new Vector3(0,1,0)));
-                    spawnslotused[randindex] = 1;
-                    blocksspawned++;
-                }
-            }
+            activeFruit = fruits[Random.Range(0, fruits.Count)];
+            Instantiate(activeFruit, spawnPoint[randindex].position, Quaternion.identity);
+            spawnlimit++;
+            spawnslotused[randindex] = 1;
         }
         manager.turn++;
     }
