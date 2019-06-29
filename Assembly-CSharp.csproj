@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Resources\Scripts\ExplodeFruitsScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\FruitSpawn.cs" />
      <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
      <Compile Include="Assets\Resources\Scripts\headlineTxt.cs" />
      <Compile Include="Assets\Resources\Scripts\Item.cs" />

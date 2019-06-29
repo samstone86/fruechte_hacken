@@ -9,11 +9,6 @@ public class ExplodeFruitsScript : MonoBehaviour
     public float maxForce;
     public float radius;
 
-    void Start()
-    {
-        ExplodeFruits();
-    }
-
     public void ExplodeFruits()
     {
         foreach (Transform t in transform)

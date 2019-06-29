@@ -6,6 +6,12 @@ public class SpawnFracturedScript : MonoBehaviour
 {
     public GameObject originalObject;
     public GameObject fracturedObject;
+    private GameObject origObj;
+
+    void Start()
+    {
+        origObj = Instantiate(originalObject, new Vector3(0, 0.5f, 0), Quaternion.identity);
+    }
 
     void Update()
     {
@@ -16,8 +22,8 @@ public class SpawnFracturedScript : MonoBehaviour
     }
 
     public void SpawnFracturedObject()
-    {
-        Destroy(originalObject);
+    {        
+        Destroy(origObj);
         GameObject fractObj = Instantiate(fracturedObject) as GameObject;
         fractObj.GetComponent<ExplodeFruitsScript>().ExplodeFruits();
     }
