@@ -70,7 +70,7 @@ public class FruitSpawn : MonoBehaviour {
 
         GameObject activeFruit;
 
-        spawnlimit = 3;
+        spawnlimit = 2;
         for (int i = 0; i <= manager.turn / 10 && i < spawnlimit; i++) //i represents the number of obstacles or items to spawn in a single wave
         {
             randindex_old = randindex;
