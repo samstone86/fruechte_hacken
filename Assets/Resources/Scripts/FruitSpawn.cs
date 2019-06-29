@@ -60,12 +60,12 @@ public class FruitSpawn : MonoBehaviour {
 
     void SpawnColliders()
     {
-        int[] spawnslotused = new int[5];
+        int[] spawnslotused = new int[3];
         spawnslotused[0] = 0; 
         spawnslotused[1] = 0; 
         spawnslotused[2] = 0;
-        spawnslotused[3] = 0;
-        spawnslotused[4] = 0;
+        //spawnslotused[3] = 0;
+        //spawnslotused[4] = 0;
         int blocksspawned = 0;
 
         GameObject activeFruit;
@@ -73,12 +73,14 @@ public class FruitSpawn : MonoBehaviour {
         spawnlimit = 2;
         for (int i = 0; i <= manager.turn / 10 && i < spawnlimit; i++) //i represents the number of obstacles or items to spawn in a single wave
         {
-            randindex_old = randindex;
-            do
-            {
-                randindex = Random.Range(0, spawnPoint.Length);
-            } while (spawnslotused[randindex] == 1);
+            //randindex_old = randindex;
+            //do
+            //{
+                
+            //} while (spawnslotused[randindex] == 1);
             //while(randindex_old == randindex);
+
+            randindex = Random.Range(0, spawnslotused.Length);
 
             activeFruit = fruits[Random.Range(0, fruits.Count)];
             Instantiate(activeFruit, spawnPoint[randindex].position, Quaternion.identity);

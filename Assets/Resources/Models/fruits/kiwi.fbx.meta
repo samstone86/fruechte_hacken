@@ -15,7 +15,9 @@ ModelImporter:
     2100000: 07___Default
     2100002: 09___Default
     2300000: Sphere001
+    2300002: //RootNode
     3300000: Sphere001
+    3300002: //RootNode
     4300000: Sphere001
     10800000: Lamp
   externalObjects: {}
