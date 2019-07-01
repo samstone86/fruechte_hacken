@@ -57,7 +57,6 @@
      <Compile Include="Assets\Resources\Scripts\FruitSpawn.cs" />
      <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
      <Compile Include="Assets\Resources\Scripts\headlineTxt.cs" />
-     <Compile Include="Assets\Resources\Scripts\Item.cs" />
      <Compile Include="Assets\Resources\Scripts\MoCapAnsteuerung.cs" />
      <Compile Include="Assets\Resources\Scripts\MoCapUtils.cs" />
      <Compile Include="Assets\Resources\Scripts\NameField.cs" />

@@ -13,7 +13,6 @@ public class Sphare : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody>();
         cf = GetComponent<ConstantForce>();
-        //cf.force.Set(50f, 0, 0);
         //Debug.Log(rb);
         rb.AddForce(10f,0,0);
     }
@@ -23,38 +22,31 @@ public class Sphare : MonoBehaviour {
         if (manager == null)
             manager = FindObjectOfType<GameManager>();
 
-        if (manager.runningGame && transform.position.x > 2 && !point)
+        if ((transform.position.x > 5) || (!manager.runningGame && transform.position.x < 0))
         {
-            //manager.addScore(1);
-            //point = true;
-        }
-	    if((transform.position.x > 5) || (!manager.runningGame && transform.position.x < 0)){
             Destroy(gameObject);
-            manager.addScore(1);
+            if (manager.extralife > 0)
+                manager.addExtralife(-1);
             point = true;
         }
-	}
+
+        if (manager.extralife <= 0)
+        {
+            manager.extralife = 0; // be sure we dont get a negative one
+            manager.EndGame();
+            return;
+        }
+    }
 
     public void OnCollisionEnter(Collision collisionInfo)
     {
-        if (collisionInfo.collider.tag == "Player" /* && manager.remaining_invulnarebility > 0*/)
+        if (collisionInfo.collider.tag == "Player")
         {
             Destroy(gameObject);
             GameObject fractObj = Instantiate(fracturedFruit) as GameObject;
             Debug.Log(fractObj.name);
             fractObj.GetComponent<ExplodeFruitsScript>().ExplodeFruits();
-        }
-        if (collisionInfo.collider.tag == "Player" && !manager.noclip)
-        {
-            if (manager.remaining_invulnarebility == 0) {
-                if (manager.extralife == 0){
-                    manager.EndGame(); 
-                    return;
-                }
-                manager.addExtralife(-1);
-                manager.setInvulnarebility(20);
-                Destroy(gameObject);
-            }
+            manager.addScore(1);
         }
         
     }

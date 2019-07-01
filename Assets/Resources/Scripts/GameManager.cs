@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
         addScore(-score);
         turn = 0;
         extralife = 0;
-        setExtralife(2);
+        setExtralife(10);
         button1.transform.position = new Vector3(0.5f, 1.5f, -5f);
         runningGame = true;
         Time.timeScale = 1;
@@ -75,13 +75,15 @@ public class GameManager : MonoBehaviour {
     public void setExtralife(int l)
     {
         extralife = l;
-        extralives.text = "Extra Lives: " + extralife;
+        // TODO delte
+        extralives.text = "Leben: " + extralife;
     }
 
     public void addExtralife(int l)
     {
         extralife += l;
-        extralives.text = "Extra Lives: " + extralife;
+        // TODO delete
+        extralives.text = "Leben: " + extralife;
     }
 
 
