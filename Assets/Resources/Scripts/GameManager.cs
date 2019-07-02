@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour {
     public int remaining_invulnarebility;
     //public GameObject startbutton;
 
+    public ShowSplashImageCanvas splashgroup;
+
     void Awake() {
         scoreTxt = FindObjectOfType<ScoreScript>();
         button1 = FindObjectOfType<StartButton>();
@@ -39,7 +41,11 @@ public class GameManager : MonoBehaviour {
             noclip = !noclip;
         }
         if(Input.GetKey(KeyCode.N) && !runningGame)
+        {
             newGame();
+            splashgroup.hideAllSplashImage();
+        }
+            
 
         if (remaining_invulnarebility > 0)
             remaining_invulnarebility--;

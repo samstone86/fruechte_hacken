@@ -73,13 +73,6 @@ public class FruitSpawn : MonoBehaviour {
         spawnlimit = 2;
         for (int i = 0; i <= manager.turn / 10 && i < spawnlimit; i++) //i represents the number of obstacles or items to spawn in a single wave
         {
-            //randindex_old = randindex;
-            //do
-            //{
-                
-            //} while (spawnslotused[randindex] == 1);
-            //while(randindex_old == randindex);
-
             randindex = Random.Range(0, spawnslotused.Length);
 
             activeFruit = fruits[Random.Range(0, fruits.Count)];

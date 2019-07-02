@@ -65,6 +65,7 @@
      <Compile Include="Assets\Resources\Scripts\SaveAndLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Resources\Scripts\ScoreScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\ShowSplashImageCanvas.cs" />
      <Compile Include="Assets\Resources\Scripts\SignMove.cs" />
      <Compile Include="Assets\Resources\Scripts\SpawnFracturedScript.cs" />
      <Compile Include="Assets\Resources\Scripts\Sphare.cs" />
