@@ -23,7 +23,7 @@ public class ScoreManager : MonoBehaviour {
             ResetHighscore();
         SetHighscore(manager.score);
         highscoreTxt.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
-        bestscoreTxt.text = "Your Best: " + bestscore.ToString();
+        bestscoreTxt.text = "Bester Score: " + bestscore.ToString();
     }
 
     void ResetHighscore() {
@@ -51,7 +51,7 @@ public class ScoreManager : MonoBehaviour {
         Debug.Log(bestscore);
         bestscore = 0;
         Debug.Log("--"+bestscore);
-        bestscoreTxt.text = "Your Best: " + bestscore.ToString();
+        bestscoreTxt.text = "Bester Score: " + bestscore.ToString();
     }
 	
 }

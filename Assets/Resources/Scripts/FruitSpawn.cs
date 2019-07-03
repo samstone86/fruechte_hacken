@@ -50,7 +50,7 @@ public class FruitSpawn : MonoBehaviour {
 	}
 
     public void newGame() {
-        FindObjectOfType<ObstaclesSpawn>().startTime = Time.time; // equal to this.startTime = Time.time?
+        FindObjectOfType<FruitSpawn>().startTime = Time.time; // equal to this.startTime = Time.time?
         waveTime = startWaveTime;
         spawnTime = 0f;
         startTime = Time.time;
@@ -60,11 +60,11 @@ public class FruitSpawn : MonoBehaviour {
 
     void SpawnColliders()
     {
-        int[] spawnslotused = new int[3];
+        int[] spawnslotused = new int[4];
         spawnslotused[0] = 0; 
         spawnslotused[1] = 0; 
         spawnslotused[2] = 0;
-        //spawnslotused[3] = 0;
+        spawnslotused[3] = 0;
         //spawnslotused[4] = 0;
         int blocksspawned = 0;
 

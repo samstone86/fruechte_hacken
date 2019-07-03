@@ -41,11 +41,7 @@ public class GameManager : MonoBehaviour {
             noclip = !noclip;
         }
         if(Input.GetKey(KeyCode.N) && !runningGame)
-        {
-            newGame();
-            splashgroup.hideAllSplashImage();
-        }
-            
+            newGame();            
 
         if (remaining_invulnarebility > 0)
             remaining_invulnarebility--;
@@ -56,7 +52,7 @@ public class GameManager : MonoBehaviour {
     public void newGame(){
         Debug.Log("New Game(Manager)");
         headlineTxt.changeState(false);
-        FindObjectOfType<ObstaclesSpawn>().newGame();
+        FindObjectOfType<FruitSpawn>().newGame();
         addScore(-score);
         turn = 0;
         extralife = 0;
@@ -64,7 +60,7 @@ public class GameManager : MonoBehaviour {
         button1.transform.position = new Vector3(0.5f, 1.5f, -5f);
         runningGame = true;
         Time.timeScale = 1;
-
+        splashgroup.hideAllSplashImage();
 
     }
     public void addScore(int i){

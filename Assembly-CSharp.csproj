@@ -60,7 +60,6 @@
      <Compile Include="Assets\Resources\Scripts\MoCapAnsteuerung.cs" />
      <Compile Include="Assets\Resources\Scripts\MoCapUtils.cs" />
      <Compile Include="Assets\Resources\Scripts\NameField.cs" />
-     <Compile Include="Assets\Resources\Scripts\ObstaclesSpawn.cs" />
      <Compile Include="Assets\Resources\Scripts\OMUnityPlugin.cs" />
      <Compile Include="Assets\Resources\Scripts\SaveAndLoad.cs" />
      <Compile Include="Assets\Resources\Scripts\ScoreManager.cs" />
