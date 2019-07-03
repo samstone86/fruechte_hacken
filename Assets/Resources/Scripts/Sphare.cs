@@ -82,9 +82,8 @@ public class Sphare : MonoBehaviour {
     {
         if (collisionInfo.collider.tag == "Player")
         {
-            Destroy(gameObject);
-            GameObject fractObj = Instantiate(fracturedFruit) as GameObject;
-            Debug.Log(fractObj.name);
+            GameObject fractObj = Instantiate(fracturedFruit, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+            Destroy(gameObject);            
             fractObj.GetComponent<ExplodeFruitsScript>().ExplodeFruits();
             manager.addScore(1);
         }

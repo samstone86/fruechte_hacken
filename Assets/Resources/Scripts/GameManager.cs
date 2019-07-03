@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
 	}
 
     public void newGame(){
-        Debug.Log("New Game(Manager)");
+        //Debug.Log("New Game(Manager)");
         headlineTxt.changeState(false);
         FindObjectOfType<FruitSpawn>().newGame();
         addScore(-score);
